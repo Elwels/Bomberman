@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMBERMAN </title>
+    <link rel="icon" type="image/PNG" href="./src/img/icon.ico">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+    }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- HUD)-->
+    <div id="hud">
+        <div class="hud-item">VIDAS <span id="hud-vidas">3</span></div>
+        <div class="hud-item">PUNTOS <span id="hud-puntos">0</span></div>
+        <div class="hud-item">TIEMPO <span id="hud-tiempo">300</span></div>
+    </div>
+
+    <!-- Pantalla de Inicio -->
+    <div id="pantalla-inicio" class="pantalla">
+    <img src="./src/img/Logo.png" alt="Bomberman 3D Logo" style="max-width: 320px; height: auto; margin-bottom: 10px;">
+        <p class="pista">
+            Muévete con <b>W, A, S, D</b> o las <b>Flechas</b>.<br>
+            Coloca bombas con la tecla <b>ESPACIO</b>.<br>
+            Destruye los bloques destructibles y elimina a los enemigos.<br>
+            Encuentra la salida  o elimina a todos los enemigos para ganar
+        </p>
+
+        <button id="btn-jugar">JUGAR</button>
+    </div>
+
+    <!-- Pantalla de Pausa-->
+    <div id="pantalla-pausa" class="pantalla oculto">
+        <h1>PAUSA</h1>
+        <p class="subtitulo">Presiona <b>P</b> para continuar</p>
+    </div>
+
+    <!-- Pantalla de Victoria -->
+    <div id="pantalla-victoria" class="pantalla oculto">
+        <h1>¡VICTORIA!</h1>
+        <p class="subtitulo">¡Completaste el nivel!</p>
+        <button id="btn-reiniciar-victoria">JUGAR DE NUEVO</button>
+    </div>
+
+    <!-- Pantalla de Game Over -->
+    <div id="pantalla-fin" class="pantalla oculto">
+        <h1>GAME OVER</h1>
+        <p class="subtitulo">Te has quedado sin vidas o se acabó el tiempo.</p>
+        <button id="btn-reiniciar">REINTENTAR</button>
+    </div>
+
+    <script type="module" src="./src/js/bomberman.js"></script>
+</body>
+
+</html>
